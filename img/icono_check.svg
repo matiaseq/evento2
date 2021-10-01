@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>icono_check</title>
+    <desc>Created with Sketch.</desc>
+    <g id="fase1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00-UI-KIT" transform="translate(-646.000000, -1878.000000)">
+            <g id="icono_check" transform="translate(646.000000, 1878.000000)">
+                <circle id="Oval" fill="#00BFA5" cx="32" cy="32" r="32"></circle>
+                <path d="M27.6657019,42.3826531 C27.3183792,42.7193878 26.8263386,43 26.3921852,43 C25.9580318,43 25.4659913,42.7053571 25.1041968,42.3686224 L17,34.5114796 L19.5759768,32.0140306 L26.406657,38.6364796 L44.4674385,21 L47,23.5395408 L27.6657019,42.3826531 L27.6657019,42.3826531 Z" id="Shape" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

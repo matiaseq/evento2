@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="./js/app.js"></script>
+    <title>Evento</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <img src="./img/IT_LOGO.png" alt="logo" class="logo" />
+            <nav class="barra">
+                <div class="menu">
+                    <input type="checkbox" id="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul class="menu-list">
+                        <li class="menu-list-li">
+                            <a class="link" href="#tematica">Tematica</a>
+                        </li>
+                        <li class="menu-list-li">
+                            <a class="link" href="#oradores">Oradores</a>
+                        </li>
+                        <li class="menu-list-li">
+                            <a class="link" href="#agenda">Agenda</a>
+                        </li>
+                        <li class="menu-list-li">
+                            <a class="link" href="#donantes">Donantes</a>
+                        </li>
+                        <li class="menu-list-li">
+                            <a class="link2" href="#formulario">Inscribite</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="evento" id="evento">
+        <div class="container">
+            <div class="box-evento">
+                <h1 class="titulo-evento">IT summit 2021</h1>
+                <iframe width="500" height="400" src="https://www.youtube.com/embed/CFPLIaMpGrY"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="box-chat">
+                <div class="tit-chat">
+                    <div class="w3-bar-w3-black">
+                        <button class="w3-bar-item-w3-button active" data-click="qa" onclick="openTab('qa')">Q&A</button>
+                        <button class="w3-bar-item-w3-button" data-click="speakers"
+                            onclick="openTab('speakers');showUsers()">Speakers</button>
+                    </div>
+                    <div id="qa" class="tab-chat">
+                        <!-- <div class="history-chat" id="historyChat">
+                            
+                        </div> -->
+                        <div class="chat-message">
+                            <div class="chat-container">
+                                <div class="chat-msg-body">
+                                    <div class="chat-msg-scroll" id="scroll">
+                                        <div class="chat-msg-text" id="historyChat"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message-chat">
+                            <button type="button" class="emoticon-chat" onclick="openIcons()"><img id="emoticonBtn"
+                                    src="./img/emoji_normal.svg" alt=""></button>
+                            <input type="text" id="message" name="message" placeholder="Ingrese su pregunta">
+                            <a type="button" class="emoticon-chat" onclick="sendQuestion('historyChat')"><img
+                                    src="./img/send_button_normal.svg" alt=""></a>
+                            <label for="">Send</label>
+                        </div>
+                        <div class="icons-chat" id="icons" style="display:none">
+                            <div>
+                                <a type="button" class="emoticon-chat"
+                                    onclick="sendEmoticon('historyChat', './img/Like_emoji.png')"><img
+                                        src="./img/Like_emoji.png" alt=""></a>
+                                <a type="button" class="emoticon-chat"
+                                    onclick="sendEmoticon('historyChat', './img/love_emoji.png')"><img
+                                        src="./img/love_emoji.png" alt=""></a>
+                                <a type="button" class="emoticon-chat"
+                                    onclick="sendEmoticon('historyChat', './img/funny_emoji.png')"><img
+                                        src="./img/funny_emoji.png" alt=""></a>
+                                <a type="button" class="emoticon-chat"
+                                    onclick="sendEmoticon('historyChat', './img/wow_emoji.png')"><img
+                                        src="./img/wow_emoji.png" alt=""></a>
+                                <a type="button" class="emoticon-chat"
+                                    onclick="sendEmoticon('historyChat', './img/sad_emoji.png')"><img
+                                        src="./img/sad_emoji.png" alt=""></a>
+                            </div>
+                            <div class="hand-chat" id="hands">
+                                <button class="emoticon-chat" href="" onclick="raiseHand()"><img id="handsIcon"
+                                        src="./img/icono_mano_normal.svg" alt=""></button>
+                                <label class="hand-text" for="">LEVANTAR LA MANO</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="speakers" class="tab-chat" style="display:none">
+                        <div id="speakersList">
+
+                        </div>
+                        <div class="chat-message" id="speakersChat" style="display:none">
+                            <a type="button" onclick="backChat()"><img src="./img/back.png" alt=""></a>
+                            <div id="speakerInfo" class="speaker-style">
+
+                            </div>
+                            <div class="chat-container">
+                                <div class="chat-msg-body">
+                                    <div class="chat-msg-scroll" id="scroll">
+                                        <div class="chat-msg-text" id="historyChat2" style="display:none"></div>
+                                        <div class="chat-msg-text" id="historyChat3" style="display:none"></div>
+                                        <div class="chat-msg-text" id="historyChat4" style="display:none"></div>
+                                        <div class="chat-msg-text" id="historyChat5" style="display:none"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message-chat" id="messageChat" style="display:none">
+                            <button type="button" class="emoticon-chat" onclick="openIcons()"><img id="emoticonBtn"
+                                    src="./img/emoji_normal.svg" alt=""></button>
+                            <input type="text" id="message" name="message" placeholder="Ingrese su pregunta">
+                            <a type="button" class="emoticon-chat" onclick="sendQuestion('historyChat')"><img
+                                    src="./img/send_button_normal.svg" alt=""></a>
+                            <label for="">Send</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tematica" id="tematica">
+        <div class="container">
+            <h2 class="tit-tematica">Tematica</h2>
+            <div class="box-tematica">
+                <div class="box-tematica-box">
+                    <div class="img-tematica" style="background-image: url(./img/img_charlas_vivo.jpg);"></div>
+                    <div class="box-info">
+                        <h4 class="tit-box">Charlas en vivo</h4>
+                        <p class="parrafo-tematica">Disfruta las charlas en vivo de los referentes de la tecnologia</p>
+                    </div>
+                </div>
+                <div class="box-tematica-box box-orange">
+                    <div class="img-tematica" style="background-image: url(./img/img_hands_on.jpg);"></div>
+                    <div class="box-info">
+                        <h4 class="tit-box">Hands-On</h4>
+                        <p class="parrafo-tematica">Trabaja con una guia para desarrollar tu primer modelo de Machine
+                            Learning</p>
+                    </div>
+                </div>
+                <div class="box-tematica-box box-violet">
+                    <div class="img-tematica" style="background-image: url(./img/img_networking.png);"></div>
+                    <div class="box-info">
+                        <h4 class="tit-box">Networking</h4>
+                        <p class="parrafo-tematica">Comparti tus experencias con todos los asistentes al evento en las
+                            salas de chat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="oradores" id="oradores">
+        <div class="container">
+            <h2 class="tit-oradores">Principales oradores</h2>
+            <div class="box-oradores">
+                <div class="box-oradores-box">
+                    <div class="img-oradores">
+                        <img src="./img/pamela_suarez.png" alt="foto de perfil de pamela">
+                    </div>
+                    <div class="text-box">
+                        <h4 class="name-oradores">Pamela Suarez</h4>
+                        <h4 class="puesto-oradores">Founder en PrestaFintech</h4>
+                        <p class="p-oradores">Pamela fundo PrestaFintech en 2019 y actualmente es una de las mas
+                            utilizadas en Argentina, Chile y Uruguay
+                        </p>
+                        <div class="redes">
+                            <img src="./img/icono linkedin.svg" alt="">
+                            <img src="./img/icono_instagram.svg" alt="">
+                            <img src="./img/icono_Twitter.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="box-oradores-box">
+                    <div class="img-oradores">
+                        <img src="./img/andres_hernandez.png" alt="foto de perfil de andres">
+                    </div>
+                    <div class="text-box">
+                        <h4 class="name-oradores">Andres Felipe Hernandez</h4>
+                        <h4 class="puesto-oradores">CTO en Trampolin</h4>
+                        <p class="p-oradores">Andres lidera un equipo de tecnologia de mas de 100 personas para una de
+                            las principales compañias de outsourcing en Colombia</p>
+                        <div class="redes">
+                            <img src="./img/icono linkedin.svg" alt="">
+                            <img src="./img/icono_instagram.svg" alt="">
+                            <img src="./img/icono_Twitter.svg" alt="">
+                            <img src="./img/icono_tictoc.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="line">
+            <div class="box-oradores">
+                <div class="box-oradores-box">
+                    <div class="img-oradores">
+                        <img src="./img/margarita_vargas.png" alt="foto de perfil de margarita">
+                    </div>
+                    <div class="text-box">
+                        <h4 class="name-oradores">Margarita Vargas</h4>
+                        <h4 class="puesto-oradores">Presidente en Ayudar!</h4>
+                        <p class="p-oradores">Margarita desarrollo una plataforma digital donde facilita a comedores
+                            sociales la recoleccion de fondos a traves de donaciones</p>
+                        <div class="redes">
+                            <img src="./img/icono linkedin.svg" alt="">
+                            <img src="./img/icono_instagram.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="box-oradores-box">
+                    <div class="img-oradores">
+                        <img src="./img/jasper_smith.png" alt="foto de perfil de jasper">
+                    </div>
+                    <div class="text-box">
+                        <h4 class="name-oradores">Jasper Smith</h4>
+                        <h4 class="puesto-oradores">Tech Lead en Ouch</h4>
+                        <p class="p-oradores">Jasper lidera varios equipos en simultaneo donde trabajan con la ultima
+                            tecnologia disponible</p>
+                        <div class="redes">
+                            <img src="./img/icono linkedin.svg" alt="">
+                            <img src="./img/icono_instagram.svg" alt="">
+                            <img src="./img/icono_Twitter.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="agenda" id="agenda">
+        <div class="container">
+            <h2 class="tit-agenda">Agenda</h2>
+            <div class="box-agenda">
+                <div class="box-agenda-box">
+                    <div class="hora-agenda">
+                        <h5>9:00 AM</h5>
+                    </div>
+                    <div class="detalle-agenda">
+                        <h5 class="tit-detalle">Apertura</h5>
+                    </div>
+                    <div class="name-agenda">
+                        <h5 class="name-color">Anfitrion</h5>
+                    </div>
+                </div>
+                <div class="box-agenda-box text-blue">
+                    <div class="hora-agenda">
+                        <h5>9:30 - 10:30</h5>
+                    </div>
+                    <div class="detalle-agenda">
+                        <h5 class="tit-detalle">La tecnologia que viene</h5>
+                        <p class="sub-detalle">Jasper nos cuenta las herramientas que estan utilizando hoy en dia y que
+                            es lo que viene en materia de desarrollo</p>
+                    </div>
+                    <div class="name-agenda">
+                        <h5 class="name-color">Jasper Smith</h5>
+                    </div>
+                </div>
+                <div class="box-agenda-box text-blue">
+                    <div class="hora-agenda">
+                        <h5>10:45 - 12:00</h5>
+                    </div>
+                    <div class="detalle-agenda">
+                        <h5 class="tit-detalle">Las mujeres y el desarrollo de software</h5>
+                        <p class="sub-detalle">Margarita nos cuenta su experiencia en el desarrollo de software y como
+                            conformo su equipo de desarrolladoras</p>
+                    </div>
+                    <div class="name-agenda">
+                        <h5 class="name-color">Margarita Vargas</h5>
+                    </div>
+                </div>
+                <div class="box-agenda-box text-orange">
+                    <div class="hora-agenda">
+                        <h5>12:15 - 13:15</h5>
+                    </div>
+                    <div class="detalle-agenda">
+                        <h5 class="tit-detalle">Hands-On</h5>
+                        <p class="sub-detalle">Estefania nos introduce en el maravilloso mundo del Machine Learning para
+                            construir nuestro primer modelo en la nube</p>
+                    </div>
+                    <div class="name-agenda">
+                        <h5 class="name-color">Estefania Spada</h5>
+                    </div>
+                </div>
+                <div class="box-agenda-box">
+                    <div class="hora-agenda">
+                        <h5>13:15 - 15:00</h5>
+                    </div>
+                    <div class="detalle-agenda">
+                        <h5 class="tit-detalle">Break - Almuerzo</h5>
+                    </div>
+                    <div class="name-agenda"></div>
+                </div>
+                <div class="box-agenda-box text-blue">
+                    <div class="hora-agenda">
+                        <h5>15:00 - 16:00</h5>
+                    </div>
+                    <div class="detalle-agenda">
+                        <h5 class="tit-detalle">24hs de desarrollo</h5>
+                        <p class="sub-detalle">Andres nos cuenta los secretos para lograr que su equipo distribuido
+                            alrededor del mundo este produciendo las 24 horas</p>
+                    </div>
+                    <div class="name-agenda">
+                        <h5 class="name-color">Andres Felipe Hernandez</h5>
+                    </div>
+                </div>
+                <div class="box-agenda-box text-blue">
+                    <div class="hora-agenda">
+                        <h5>16:15 - 17:15</h5>
+                    </div>
+                    <div class="detalle-agenda">
+                        <h5 class="tit-detalle">Un modelo Win-Win</h5>
+                        <p class="sub-detalle">Pamela relata como su modelo de negocio permite a todos los stakeholders
+                            salir ganando</p>
+                    </div>
+                    <div class="name-agenda">
+                        <h5 class="name-color">Pamela Suarez</h5>
+                    </div>
+                </div>
+                <div class="box-agenda-box">
+                    <div class="hora-agenda">
+                        <h5>17:15 - 18:00</h5>
+                    </div>
+                    <div class="detalle-agenda">
+                        <h5 class="tit-detalle">Sesion de preguntas y respuestas</h5>
+                        <p class="sub-detalle">El panel de nuestros 4 oradores estrella se reune para responder todas
+                            tus dudas o preguntas</p>
+                    </div>
+                    <div class="name-agenda">
+                        <h5 class="name-color">Anfitrion</h5>
+                    </div>
+                </div>
+                <div class="box-agenda-box">
+                    <div class="hora-agenda">
+                        <h5>18:00 - 19:00</h5>
+                    </div>
+                    <div class="detalle-agenda">
+                        <h5 class="tit-detalle">Musica en vivo</h5>
+                        <p class="sub-detalle">Disfruta de musica en vivo mientras intercambias opiniones con los demas
+                            asistentes</p>
+                    </div>
+                    <div class="name-agenda">
+                        <h5 class="name-color">Anfitrion</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="donantes" id="donantes">
+        <div class="container">
+            <h2 class="tit-donantes">Donantes</h2>
+            <h4 class="parrafo-donantes">IT Summit 2021 esta infinitamente agradecido con todos los donantes que nos
+                acompañan en el dia de hoy y que permiten que este evento no solo sea posible, sino que ademas sea libre
+                y gratuito para todos</h4>
+            <div class="box-donantes">
+                <div class="name-donantes">
+                    <img src="./img/donantes_evangelina.png" alt="" class="img-donantes">
+                    <div class="text-donantes">
+                        <h5 class="name-style">Evangelina Gonzalez</h5>
+                        <p class="text-style">Gracias a la fundacion que preside Evangelina, IT Summit 2021 recibio
+                            varias donaciones a lo
+                            largo del año.</p>
+                    </div>
+                </div>
+                <div class="name-donantes">
+                    <img src="./img/donantes_camilo.png" alt="" class="img-donantes">
+                    <div class="text-donantes">
+                        <h5 class="name-style">Camilo Garcia</h5>
+                        <p class="text-style">Camilo trabaja en una importante compañia multinacional de gaseosas y
+                            gestiono los fondos
+                            para una importante donacion.</p>
+                    </div>
+                </div>
+                <div class="name-donantes">
+                    <img src="./img/celina_gomez.png" alt="" class="img-donantes">
+                    <div class="text-donantes">
+                        <h5 class="name-style">Celina Gomez</h5>
+                        <p class="text-style">Celina es una amiga de la casa, tenemos una relacion que perdura en el
+                            tiempo y recibimos año
+                            tras año aportes de la linea area donde trabaja</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="formulario" id="formulario">
+        <div class="container">
+            <h2 class="tit-formulario">Inscribete</h2>
+            <form action="" class="form">
+                <div class="datos-form">
+                    <label for="nombre" class="datos">Nombre:</label>
+                    <input type="text" class="datos-input" id="nombre" name="nombre" placeholder="Nombre" required>
+                </div>
+                <div class="datos-form">
+                    <label for="apellido" class="datos">Apellido:</label>
+                    <input type="text" class="datos-input" id="apellido" name="apellido" placeholder="Apellido"
+                        required>
+                </div>
+                <div class="datos-form">
+                    <label for="email" class="datos">E-mail</label>
+                    <input type="email" class="datos-input" id="email" name="email" placeholder="E-mail" required>
+                </div>
+                <div class="datos-form">
+                    <label for="empresa" class="datos">Empresa</label>
+                    <input type="empresa" class="datos-input" id="empresa" name="empresa" placeholder="Empresa"
+                        required>
+                </div>
+                <div class="datos-form">
+                    <label for="cargo" class="datos">Cargo</label>
+                    <input type="cargo" class="datos-input" id="cargo" name="cargo" placeholder="Cargo" required>
+                </div>
+                <div class="datos-form">
+                    <label for="telefono" class="datos">Telefono</label>
+                    <input type="tel" class="datos-input" id="telefono" name="telefono" placeholder="Telefono">
+                </div>
+                <div class="datos-form">
+                    <label for="pais" class="datos">Pais</label>
+                    <select name="pais" class="datos-input" id="pais" required>
+                        <option value="" selected disabled>Pais</option>
+                        <option value="ar">Argentina</option>
+                        <option value="co">Colombia</option>
+                        <option value="ur">Uruguay</option>
+                        <option value="br">Brasil</option>
+                    </select>
+                </div>
+                <div class="datos-form">
+                    <label for="localidad" class="datos">Localidad</label>
+                    <select name="localidad" class="datos-input" id="localidad" required>
+                        <option value="" selected disabled>Localidad</option>
+                        <option value="bue">Buenos Aires</option>
+                        <option value="bo">Bogota</option>
+                        <option value="mon">Montevideo</option>
+                        <option value="sao">Sao Paulo</option>
+                    </select>
+
+                </div>
+                <div class="boton">
+                    <a class="style" href="#answer">Registrarme</a>
+                </div>
+            </form>
+        </div>
+        <div class="answer" id="answer">
+            <div class="container">
+                <img src="./img/icono_check.svg" alt="" class="check">
+                <div class="text-answer">
+                    <h2 class="tit">¡Gracias por registrarte!</h2>
+                    <p class="p-parrafo">Tu participacion esta confirmada</p>
+                    <p class="p-parrafo">El dia del evento recibiras el link para conectarte al evento en vivo</p>
+                    <h4 class="text-tit">¡Te esperamos!</h4>
+                    <p class="parrafo">Comparte este evento en tus redes</p>
+                </div>
+                <div class="redes">
+                    <img src="./img/icono linkedin.svg" alt="">
+                    <img src="./img/icono_instagram.svg" alt="">
+                    <img src="./img/icono_Twitter.svg" alt="">
+                    <img src="./img/icono_tictoc.svg" alt="">
+                </div>
+                <a class="close" href="#formulario">&times;</a>
+            </div>
+        </div>
+    </section>
+    <footer class="foot" id="foot">
+        <div class="container">
+            <p class="text">Copyright ©2021 IT Summit. Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

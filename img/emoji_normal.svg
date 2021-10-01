@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>emoji_normal</title>
+    <desc>Created with Sketch.</desc>
+    <g id="entregables-copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00-UI-KIT" transform="translate(-97.000000, -2390.000000)">
+            <g id="button_normal" transform="translate(98.000000, 2274.000000)">
+                <g id="emoji_normal" transform="translate(0.000000, 117.000000)">
+                    <g id="icon_emoticon">
+                        <circle id="Oval-4-Copy" stroke="#CDD0D4" cx="12.5" cy="12.5" r="12.5"></circle>
+                        <g id="Group-6" transform="translate(6.250000, 7.291667)" fill="#8B8F94">
+                            <circle id="Oval-5" cx="10.9375" cy="1.5625" r="1.5625"></circle>
+                            <circle id="Oval-5-Copy" cx="1.5625" cy="1.5625" r="1.5625"></circle>
+                        </g>
+                        <path d="M18.7611962,14.5835989 C18.2196618,17.9616984 15.4129729,20.5357143 12.0319591,20.5357143 C8.65094537,20.5357143 5.84425645,17.9616984 5.30272213,14.5835989 Z" id="Combined-Shape" stroke="#CDD0D4"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

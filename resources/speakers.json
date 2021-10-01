@@ -1,0 +1,30 @@
+[
+    {
+        "firstName": "Pamela",
+        "lastName": "Suarez",
+        "position": "Presidente de Ayudar",
+        "imgProfile": "../img/pamela_suarez.png",
+        "chatId": "historyChat2"
+    },
+    {
+        "firstName": "Margarita",
+        "lastName": "Vargas",
+        "position": "Presidente de Ayudar",
+        "imgProfile": "../img/margarita_vargas.png",
+        "chatId": "historyChat3"
+    },
+    {
+        "firstName": "Andres Felipe",
+        "lastName": "Hernandez",
+        "position": "CTO en Trampolin",
+        "imgProfile": "../img/andres_hernandez.png",
+        "chatId": "historyChat4"
+    },
+    {
+        "firstName": "Jasper",
+        "lastName": "Smith",
+        "position": "Tech Lead en Ouch",
+        "imgProfile": "../img/jasper_smith.png",
+        "chatId": "historyChat5"
+    }
+]
