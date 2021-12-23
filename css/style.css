@@ -269,8 +269,25 @@
 .evento .container .box-evento .titulo-evento {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 36px;
   color: #00bfa5;
+  letter-spacing: 0;
+}
+
+.evento .container .box-evento .redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.evento .container .box-evento .redes .text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #13373d;
+  letter-spacing: 0;
 }
 
 .evento .container .box-evento .fecha-evento {
@@ -1216,144 +1233,84 @@
   width: 140px;
 }
 
-.formulario {
-  background-image: url("./img_bg_form_desktop.png");
-  padding: 30px 0;
-  position: relative;
-}
-
-.formulario .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.formulario .container .tit-formulario {
-  width: 100%;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size: 36px;
-  color: #02353c;
-  text-align: center;
-  line-height: 48px;
-}
-
-.formulario .container .form {
-  width: 620px;
-  background: #ffffff;
-  border: 1px solid #e1e1e1;
-  padding: 30px 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-@media screen and (max-width: 600px) {
-  .formulario .container .form {
-    width: 100%;
-  }
-}
-
-.formulario .container .form .datos-form {
-  width: 48%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 10px 0;
-}
-
-@media screen and (max-width: 600px) {
-  .formulario .container .form .datos-form {
-    width: 100%;
-  }
-}
-
-.formulario .container .form .datos-form .datos {
-  font-family: "Montserrat", sans-serif;
-  font-size: 13px;
-  color: #000000;
-  padding: 8px 0;
-}
-
-.formulario .container .form .datos-form .datos-input {
-  background: #ffffff;
-  border: 1px solid #d8d8d8;
-  border-radius: 2px;
-  padding: 14px 10px;
-}
-
-.formulario .container .form .datos-form .datos-input::-webkit-input-placeholder {
-  font-family: "Montserrat", sans-serif;
-  font-size: 13px;
-  color: #6d7278;
-}
-
-.formulario .container .form .datos-form .datos-input:-ms-input-placeholder {
-  font-family: "Montserrat", sans-serif;
-  font-size: 13px;
-  color: #6d7278;
-}
-
-.formulario .container .form .datos-form .datos-input::-ms-input-placeholder {
-  font-family: "Montserrat", sans-serif;
-  font-size: 13px;
-  color: #6d7278;
-}
-
-.formulario .container .form .datos-form .datos-input::placeholder {
-  font-family: "Montserrat", sans-serif;
-  font-size: 13px;
-  color: #6d7278;
-}
-
-.formulario .container .form .boton {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 30px;
-}
-
-.formulario .container .form .boton .style {
-  background: #00bfa5;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  color: #ffffff;
-  letter-spacing: 0;
-  text-align: center;
-  padding: 12px 24px;
-  border: 0;
-  text-decoration: none;
-}
-
+/*.formulario {
+    background-image: url("./img_bg_form_desktop.png");
+    padding: 30px 0;
+    position: relative;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .tit-formulario {
+            width: 100%;
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 36px;
+            color: #02353c;
+            text-align: center;
+            line-height: 48px;
+        }
+        .form {
+            width: 620px;
+            @media screen and (max-width: 600px) {
+                width: 100%;
+            }
+            background: #ffffff;
+            border: 1px solid #e1e1e1;
+            padding: 30px 50px;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            .datos-form {
+                width: 48%;
+                display: flex;
+                flex-direction: column;
+                margin: 10px 0;
+                @media screen and (max-width: 600px) {
+                    width: 100%;
+                }
+                .datos {
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 13px;
+                    color: #000000;
+                    padding: 8px 0;
+                }
+                .datos-input {
+                    background: #ffffff;
+                    border: 1px solid #d8d8d8;
+                    border-radius: 2px;
+                    padding: 14px 10px;
+                    &::placeholder {
+                        font-family: "Montserrat", sans-serif;
+                        font-size: 13px;
+                        color: #6d7278;
+                    }
+                }
+            }
+            .boton {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 30px;
+                .style {
+                    background: #00bfa5;
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #ffffff;
+                    letter-spacing: 0;
+                    text-align: center;
+                    padding: 12px 24px;
+                    border: 0;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}*/
 .answer {
   position: absolute;
   top: 0;

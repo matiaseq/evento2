@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>facebook_normal</title>
+    <desc>Created with Sketch.</desc>
+    <g id="entregables-copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00-UI-KIT" transform="translate(-98.000000, -2559.000000)" fill="#3A589B">
+            <g id="button_normal" transform="translate(98.000000, 2274.000000)">
+                <path d="M15,315 C6.716,315 0,308.284 0,300 C0,291.7155 6.716,285 15,285 C23.284,285 30,291.7155 30,300 C30,308.284 23.284,315 15,315 L15,315 Z M13.2297823,307.941176 L16.7513035,307.941176 L16.7513035,299.999027 L19.1005508,299.999027 L19.4117647,297.262435 L16.7513035,297.262435 L16.7549587,295.892193 C16.7549587,295.178849 16.8280626,294.795902 17.9267104,294.795902 L19.3950552,294.795902 L19.3950552,292.058824 L17.0452858,292.058824 C14.2229515,292.058824 13.2297823,293.386732 13.2297823,295.619215 L13.2297823,297.262435 L11.4705882,297.262435 L11.4705882,299.999513 L13.2297823,299.999513 L13.2297823,307.941176 Z" id="facebook_normal"></path>
+            </g>
+        </g>
+    </g>
+</svg>

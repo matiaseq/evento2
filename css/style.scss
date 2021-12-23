@@ -187,8 +187,21 @@
             .titulo-evento {
                 font-family: "Montserrat", sans-serif;
                 font-weight: bold;
-                font-size: 48px;
+                font-size: 36px;
                 color: #00bfa5;
+                letter-spacing: 0;
+            }
+            .redes {
+                display: flex;
+                justify-content: flex-end;
+                .text {
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 12px;
+                    color: #13373d;
+                    letter-spacing: 0;
+                }
+                .icons {
+                }
             }
             .fecha-evento {
                 font-family: "Montserrat", sans-serif;
@@ -921,7 +934,7 @@
         }
     }
 }
-.formulario {
+/*.formulario {
     background-image: url("./img_bg_form_desktop.png");
     padding: 30px 0;
     position: relative;
@@ -998,7 +1011,7 @@
             }
         }
     }
-}
+}*/
 .answer {
     position: absolute;
     top: 0;
