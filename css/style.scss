@@ -172,17 +172,34 @@
 .evento {
     background: #f3f0ee;
     padding: 74px 0 50px;
+    @media screen and (max-width: 900px) {
+        //max-width: 95%;
+    }
     @media screen and (max-width: 600px) {
-        padding: 42px 0 50px;
+        //max-width: 95%;
     }
     .container {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        @media screen and (max-width: 900px) {
+            display: inline-block;
+            //max-width: 95%;
+        }
+        @media screen and (max-width: 600px) {
+            display: inline-block;
+            //max-width: 95%;
+        }
         .box-evento {
             max-width: 380px;
-            @media screen and (max-width: 900px) {
-                max-width: 100%;
+            .video{
+                .youtube{
+                width: 424px;
+                height: 238px ;
+                @media screen and (max-width: 600px) {
+                    width: 100%;
+                }
+            }
             }
             .titulo-evento {
                 font-family: "Montserrat", sans-serif;
@@ -194,13 +211,23 @@
             .redes {
                 display: flex;
                 justify-content: flex-end;
+                @media screen and (max-width: 600px) {
+                    display: flex;
+                    align-items:center;
+                }
                 .text {
                     font-family: "Montserrat", sans-serif;
                     font-size: 12px;
                     color: #13373d;
                     letter-spacing: 0;
+                    margin: 20px 10px;
                 }
                 .icons {
+                    margin: 10px;
+                    @media screen and (max-width: 600px) {
+                        display: flex;
+                        align-items:center;
+                    }
                 }
             }
             .fecha-evento {
@@ -231,12 +258,17 @@
                 text-decoration: none;
             }
         }
+    }
         .box-chat {
-            width: 428px;
+            width: 350px;
             position: relative;
+            margin: 76px;
+            @media screen and (max-width: 600px) {
+                margin: 35px;
+            }
             .tit-chat {
                 .w3-bar-w3-black {
-                    .w3-bar-item-w3-button {
+                    .w3-bar-item-w3-button{
                         font-family: "Montserrat", sans-serif;
                         font-weight: 500;
                         font-size: 16px;
@@ -245,6 +277,7 @@
                         letter-spacing: 0;
                         border: 0;
                         border-bottom: 3px solid transparent;
+                        margin: 3px 20px;
                         &.active {
                             border-color: #00bfa5;
                             color: #00bfa5;
@@ -252,8 +285,8 @@
                     }
                 }
                 .tab-chat {
-                    height: 304px;
-                    width: 300px;
+                    height: 100%;
+                    width: 304px;
                     opacity: 0.93;
                     background: #ffffff;
                     .chat-message {
@@ -324,10 +357,10 @@
                     .message-chat {
                         background: #ffffff;
                         display: flex;
-                        #icons {
+                        .icons-chat {
                             align-items: flex-end;
                         }
-                        #message {
+                        .input-message {
                             font-family: "Montserrat", sans-serif;
                             font-size: 13px;
                             color: #02353c;
@@ -404,7 +437,6 @@
                 }
             }
         }
-    }
 }
 .encuesta {
     background: #f3f0ee;
@@ -472,6 +504,13 @@
 }
 .evento-general {
     .container {
+        display: block;
+        @media screen and (max-width: 900px) {
+            max-width: 95%;
+        }
+        @media screen and (max-width: 600px) {
+            max-width: 95%;
+        }
         .evento-tit {
             font-family: "Montserrat", sans-serif;
             font-weight: bold;
@@ -488,6 +527,16 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            @media screen and (max-width: 900px) {
+                display: flex;
+                flex-direction: column;
+                max-width: 95%;
+            }
+            @media screen and (max-width: 600px) {
+                display: flex;
+                flex-direction: column;
+                max-width: 95%;
+            }
             .evento-subtit {
                 font-family: "Montserrat", sans-serif;
                 font-weight: 400;
@@ -501,6 +550,13 @@
 }
 .actividades {
     .container {
+        display: block;
+        @media screen and (max-width: 900px) {
+            max-width: 95%;
+        }
+        @media screen and (max-width: 600px) {
+            max-width: 95%;
+        }
         .act-tit {
             font-family: "Montserrat", sans-serif;
             font-weight: bold;
@@ -517,6 +573,16 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            @media screen and (max-width: 900px) {
+                display: flex;
+                flex-direction: column;
+                max-width: 95%;
+            }
+            @media screen and (max-width: 600px) {
+                display: flex;
+                flex-direction: column;
+                max-width: 95%;
+            }
             .act-subtit {
                 font-family: "Montserrat", sans-serif;
                 font-weight: 400;
@@ -548,6 +614,12 @@
             line-height: 28px;
         }
         .area {
+            @media screen and (max-width: 900px) {
+                max-width: 95%;
+            }
+            @media screen and (max-width: 600px) {
+                max-width: 95%;
+            }
             display: block;
             margin: 15px auto;
             background: #f8f9f9;
@@ -571,47 +643,91 @@
     }
 }
 .respuesta {
-    .tit {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 600;
-        font-size: 25px;
-        color: #000000;
-        letter-spacing: 0;
-        text-align: center;
-        line-height: 31px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 100%;
+    display: flex;
+    &:target {
+        visibility: visible;
+        opacity: 1;
     }
-    .parrafo {
-        font-family: "Montserrat", sans-serif;
-        font-size: 15px;
-        color: #000000;
-        letter-spacing: 0;
-        text-align: center;
-        line-height: 31px;
+    .container{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        background: #ffffff;
+        border: 1px solid #e1e1e1;
+        width: 620px;
+        padding: 45px 0;
+        .check {
+            text-align: center;
+        }
+        .tit {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            font-size: 25px;
+            color: #000000;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 31px;
+        }
+        .parrafo {
+            font-family: "Montserrat", sans-serif;
+            font-size: 15px;
+            color: #000000;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 31px;
+        }
+        .sub-parrafo {
+            font-family: "Montserrat", sans-serif;
+            font-size: 15px;
+            color: #000000;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 31px;
+        }
+        .saludo {
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            color: #000000;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 31px;
+        }
+        .social {
+            text-align: center;
+        }
     }
-    .sub-parrafo {
-        font-family: "Montserrat", sans-serif;
-        font-size: 15px;
-        color: #000000;
-        letter-spacing: 0;
-        text-align: center;
-        line-height: 31px;
-    }
-    .saludo {
-        font-family: "Montserrat", sans-serif;
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        transition: all 200ms;
+        font-size: 30px;
         font-weight: bold;
-        font-size: 18px;
-        color: #000000;
-        letter-spacing: 0;
-        text-align: center;
-        line-height: 31px;
-    }
-    .social {
-        text-align: center;
+        text-decoration: none;
+        color: #333;
     }
 }
 .tematica {
     background-color: #f8f9f9;
     padding: 30px 0;
+    @media screen and (max-width: 600px) {
+        padding: 42px 0 50px;
+        width: 100%;
+    }
+    @media screen and (max-width: 900px) {
+        max-width: 95%;
+    }
     .container {
         .tit-tematica {
             font-family: "Montserrat", sans-serif;
@@ -626,6 +742,7 @@
             justify-content: space-between;
             @media screen and (max-width: 600px) {
                 flex-direction: column;
+                width: 100%;
             }
             .box-tematica-box {
                 width: calc(33% - 10px);
@@ -708,6 +825,7 @@
                 align-items: flex-start;
                 @media screen and (max-width: 900px) {
                     flex-direction: column;
+                    width: 100%;
                 }
                 @media screen and (max-width: 600px) {
                     width: 100%;

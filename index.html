@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <script src="./js/app.js"></script>
     <title>Evento</title>
 </head>
 
@@ -48,14 +47,16 @@
         <div class="container">
             <div class="box-evento">
                 <h1 class="titulo-evento">IT summit 2021</h1>
-                <iframe width="500" height="400" src="https://www.youtube.com/embed/CFPLIaMpGrY"
+                <div class="video">
+                    <iframe class="youtube" src="https://www.youtube.com/embed/XiS7_TJcWEc"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
+                </div>
                 <div class="redes">
                     <h4 class="text">Compartir</h4>
-                    <img src="./img/share_normal.svg" alt="">
                     <div class="icons">
+                        <img src="./img/share_normal.svg" alt="">
                         <a href=""><img src="./img/whatsapp_normal.svg" alt=""></a>
                         <a href=""><img src="./img/facebook_normal.svg" alt=""></a>
                         <a href=""><img src="./img/instagram_normal.svg" alt=""></a>
@@ -68,78 +69,53 @@
                         <button class="w3-bar-item-w3-button active" data-click="qa"
                             onclick="openTab('qa')">Q&A</button>
                         <button class="w3-bar-item-w3-button" data-click="speakers"
-                            onclick="openTab('speakers');showUsers()">Speakers</button>
+                            onclick="openTab('speakers');">Speakers</button>
                     </div>
                     <div id="qa" class="tab-chat">
-                        <div class="chat-message">
-                            <div class="chat-container">
-                                <div class="chat-msg-body">
-                                    <div class="chat-msg-scroll" id="scroll">
-                                        <div class="chat-msg-text" id="historyChat"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="message-chat">
-                            <button type="button" class="emoticon-chat" onclick="openIcons()"><img id="emoticonBtn"
-                                    src="./img/emoji_normal.svg" alt=""></button>
-                            <input type="text" id="message" name="message" placeholder="Ingrese su pregunta">
-                            <a type="button" class="emoticon-chat" onclick="sendQuestion('historyChat')"><img
-                                    src="./img/send_button_normal.svg" alt=""></a>
-                            <label for="">Send</label>
-                        </div>
-                        <div class="icons-chat" id="icons" style="display:none">
-                            <div>
-                                <a type="button" class="emoticon-chat"
-                                    onclick="sendEmoticon('historyChat', './img/Like_emoji.png')"><img
-                                        src="./img/Like_emoji.png" alt=""></a>
-                                <a type="button" class="emoticon-chat"
-                                    onclick="sendEmoticon('historyChat', './img/love_emoji.png')"><img
-                                        src="./img/love_emoji.png" alt=""></a>
-                                <a type="button" class="emoticon-chat"
-                                    onclick="sendEmoticon('historyChat', './img/funny_emoji.png')"><img
-                                        src="./img/funny_emoji.png" alt=""></a>
-                                <a type="button" class="emoticon-chat"
-                                    onclick="sendEmoticon('historyChat', './img/wow_emoji.png')"><img
-                                        src="./img/wow_emoji.png" alt=""></a>
-                                <a type="button" class="emoticon-chat"
-                                    onclick="sendEmoticon('historyChat', './img/sad_emoji.png')"><img
-                                        src="./img/sad_emoji.png" alt=""></a>
-                            </div>
-                            <div class="hand-chat" id="hands">
-                                <button class="emoticon-chat" href="" onclick="raiseHand()"><img id="handsIcon"
-                                        src="./img/icono_mano_normal.svg" alt=""></button>
-                                <label class="hand-text" for="">LEVANTAR LA MANO</label>
-                            </div>
-                        </div>
+                        <div class="chat-wrapper" id="qaChat"></div>
                     </div>
                     <div id="speakers" class="tab-chat" style="display:none">
                         <div id="speakersList">
-
-                        </div>
-                        <div class="chat-message" id="speakersChat" style="display:none">
-                            <a type="button" onclick="backChat()"><img src="./img/back.png" alt=""></a>
-                            <div id="speakerInfo" class="speaker-style">
-
-                            </div>
-                            <div class="chat-container">
-                                <div class="chat-msg-body">
-                                    <div class="chat-msg-scroll" id="scroll">
-                                        <div class="chat-msg-text" id="historyChat2" style="display:none"></div>
-                                        <div class="chat-msg-text" id="historyChat3" style="display:none"></div>
-                                        <div class="chat-msg-text" id="historyChat4" style="display:none"></div>
-                                        <div class="chat-msg-text" id="historyChat5" style="display:none"></div>
-                                    </div>
+                            <div class="speaker-style">
+                                <img width="100px" class="speaker-img" src="./img/pamela_suarez.png">
+                                <div class="speaker-info">
+                                    <span>Pamela Suarez</span>
+                                    <div class="position">Presidente de Ayudar</div>
                                 </div>
+                                <div class="chat-button"><a onclick="openChat(0)"><img
+                                            src="./img/enviarmensaje_normal.png"></a></div>
+                            </div>
+                            <div class="speaker-style">
+                                <img width="100px" class="speaker-img" src="./img/margarita_vargas.png">
+                                <div class="speaker-info">
+                                    <span>Margarita Vargas</span>
+                                    <div class="position">Presidente de Ayudar</div>
+                                </div>
+                                <div class="chat-button"><a onclick="openChat(1)"><img
+                                            src="./img/enviarmensaje_normal.png"></a></div>
+                            </div>
+                            <div class="speaker-style">
+                                <img width="100px" class="speaker-img" src="./img/andres_hernandez.png">
+                                <div class="speaker-info">
+                                    <span>Andres Felipe Hernandez</span>
+                                    <div class="position">CTO en Trampolin</div>
+                                </div>
+                                <div class="chat-button"><a onclick="openChat(2)"><img
+                                            src="./img/enviarmensaje_normal.png"></a></div>
+                            </div>
+                            <div class="speaker-style">
+                                <img width="100px" class="speaker-img" src="./img/jasper_smith.png">
+                                <div class="speaker-info">
+                                    <span>Jasper Smith</span>
+                                    <div class="position">Tech Lead en Ouch</div>
+                                </div>
+                                <div class="chat-button"><a onclick="openChat(3)"><img
+                                            src="./img/enviarmensaje_normal.png"></a></div>
                             </div>
                         </div>
-                        <div class="message-chat" id="messageChat" style="display:none">
-                            <button type="button" class="emoticon-chat" onclick="openIcons()"><img id="emoticonBtn"
-                                    src="./img/emoji_normal.svg" alt=""></button>
-                            <input type="text" id="message" name="message" placeholder="Ingrese su pregunta">
-                            <a type="button" class="emoticon-chat" onclick="sendQuestion('historyChat')"><img
-                                    src="./img/send_button_normal.svg" alt=""></a>
-                            <label for="">Send</label>
+                        <div class="speakers-chats" id="spChat" style="display: none;">
+                            <a id="spChatBack"><img src="./img/back.png" alt=""></a>
+                            <div class="chat-wrapper" id="speakersChat"></div>
                         </div>
                     </div>
                 </div>
@@ -487,6 +463,8 @@
             <p class="text">Copyright ©2021 IT Summit. Todos los derechos reservados</p>
         </div>
     </footer>
+    <!-- <script src="./js/app.js"></script> -->
+    <script src="./js/chat.js"></script>
 
 </body>
 
